@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <title>animal test</title>
+    <link rel="stylesheet" href="css/livart.css">
+    <style media="screen">
+    body{
+      background: url("images/animal/bg.jpg")no-repeat top center / contain;
+    }
+    img {
+      width: 100%;
+    }
+    section {
+      display: flex;
+      align-items: center;
+      width: 800px;
+      justify-content: space-between;
+      margin: auto;
+    }
+    #pic  {
+      width: 450px;
+      margin: auto;
+      left: 35%
+    }
+    button  {
+      display: block;
+      width: 60px;
+      background: transparent;
+      border: none;
+    }
+
+    </style>
+  </head>
+  <body>
+    <section>
+    <div>
+      <button onclick="changePic(0);"><img src="images/animal/button1.png" alt="왼쪽"></button>
+    </div>
+    <div id="pic">
+      <img src="images/animal/1.png" id="scene" alt="동물 심리테스트 화면">
+    </div>
+    <div>
+      <button onclick="changePic(1);"><img src="images/animal/button2.png" alt="오른쪽"></button>
+    </div>
+  </section>
+  <script type="text/javascript">
+  let num = 1
+  function changePic(idx) {
+    if (idx){
+      if (num == 15) num = 0;
+      num++;
+    } else {
+      if(num == 1) num = 15;
+      num--;
+    }
+    let imgtag = document.getElementById("scene");
+    imgtag.setAttribute("src", "images/animal/" + num + ".png");
+  }
+  </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
