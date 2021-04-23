@@ -3,32 +3,44 @@
   <head>
     <meta charset="utf-8">
     <title>오늘의서재 개발 기획서</title>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      let i = 12;
+      $("a").click(function(){
+        i--;
+        if(i==0){
+          $("a").stop().fadeIn(500);
+          i = 12;
+        }else{
+          $(this).stop().fadeOut(500);
+        }
+      });
+    });
+    </script>
     <style media="screen">
-      img {
-        width: 1200px; display: block; margin: auto;
-      }
+      * {margin:0;}
+      body{text-align:center;}
+      section {max-width: 1499px; margin:auto; position:relative;}
+      a {position:absolute; width:100%;}
+      a, img {display:block; width:100%;}
     </style>
-  </head>
-
   <body>
-    <!-- app.component.html -->
-<div fullpage id="fullpage"
-[options]="config"
-(ref)="getRef($event)">
-    <div class="section"><img src="images/libraryconcept/Asset 12@3x.png" alt="오늘의서재"></div>
-    <div class="section"><img src="images/libraryconcept/Asset 11@3x.png" alt="오늘의서재"></div>
-    <div class="section"><img src="images/libraryconcept/Asset 10@3x.png" alt="오늘의서재"></div>
-    <div class="section"><img src="images/libraryconcept/Asset 9@3x.png" alt="오늘의서재"></div>
-    <div class="section"><img src="images/libraryconcept/Asset 8@3x.png" alt="오늘의서재"></div>
-    <div class="section"><img src="images/libraryconcept/Asset 7@3x.png" alt="오늘의서재"></div>
-    <div class="section"><img src="images/libraryconcept/Asset 6@3x.png" alt="오늘의서재"></div>
-    <div class="section"><img src="images/libraryconcept/Asset 5@3x.png" alt="오늘의서재"></div>
-    <div class="section"><img src="images/libraryconcept/Asset 4@3x.png" alt="오늘의서재"></div>
-    <div class="section"><img src="images/libraryconcept/Asset 3@3x.png" alt="오늘의서재"></div>
-    <div class="section"><img src="images/libraryconcept/Asset 2@3x.png" alt="오늘의서재"></div>
-    <div class="section"><img src="images/libraryconcept/Asset 1@3x.png" alt="오늘의서재"></div>
-</div>
+
+    <section>
+      <a href="#"><img src="images/libraryconcept/library_poroposal-12.jpg" alt="오늘의서재"></a>
+      <a href="#"><img src="images/libraryconcept/library_poroposal-11.jpg" alt="오늘의서재"></a>
+      <a href="#"><img src="images/libraryconcept/library_poroposal-10.jpg" alt="오늘의서재"></a>
+      <a href="#"><img src="images/libraryconcept/library_poroposal-09.jpg" alt="오늘의서재"></a>
+      <a href="#"><img src="images/libraryconcept/library_poroposal-08.jpg" alt="오늘의서재"></a>
+      <a href="#"><img src="images/libraryconcept/library_poroposal-07.jpg" alt="오늘의서재"></a>
+      <a href="#"><img src="images/libraryconcept/library_poroposal-06.jpg" alt="오늘의서재"></a>
+      <a href="#"><img src="images/libraryconcept/library_poroposal-05.jpg" alt="오늘의서재"></a>
+      <a href="#"><img src="images/libraryconcept/library_poroposal-04.jpg" alt="오늘의서재"></a>
+      <a href="#"><img src="images/libraryconcept/library_poroposal-03.jpg" alt="오늘의서재"></a>
+      <a href="#"><img src="images/libraryconcept/library_poroposal-02.jpg" alt="오늘의서재"></a>
+      <a href="#"><img src="images/libraryconcept/library_poroposal-01.jpg" alt="오늘의서재"></a>
+    </section>
 
   </body>
 </html>
